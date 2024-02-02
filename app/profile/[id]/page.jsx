@@ -1,8 +1,11 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { useSearchParams } from "react-query/core"; // Change import statement
-import { useQuery } from 'react-query';
+//import { useQuery } from 'react-query';
+//import { useSearchParams } from "react-query/core"; // Change import statement
+import { useQuery, useSearchParams } from 'react-query';
+
+
 
 import Profile from "@components/Profile";
 
