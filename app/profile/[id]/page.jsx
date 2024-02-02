@@ -1,13 +1,17 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { useSearchParams } from "next/navigation";
+import { useSearchParams } from "react-query/core"; // Change import statement
 
 import Profile from "@components/Profile";
 
 const UserProfile = ({ params }) => {
   const searchParams = useSearchParams();
-  const userName = searchParams.get("name");
+  const userName = React.useMemo(() => {
+    return React.Suspense(() => {
+      return searchParams.get("name");
+    });
+  }, [searchParams]);
 
   const [userPosts, setUserPosts] = useState([]);
 

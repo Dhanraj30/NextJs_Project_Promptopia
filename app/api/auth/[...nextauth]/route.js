@@ -10,7 +10,9 @@ const handler = NextAuth({
       clientId: process.env.GOOGLE_ID,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
       callbackUrl: 'http://localhost:3000/api/auth/callback/google',
-      timeout: 5000 // Increase timeout here
+      httpOptions: {
+        timeout: 10000, // Increase timeout to 10 seconds
+      },
     })
   ],
   callbacks: {
