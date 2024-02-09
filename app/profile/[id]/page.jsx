@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 //import { useQuery } from 'react-query';
 //import { useSearchParams } from "react-query/core"; // Change import statement
-import { useQuery, useSearchParams } from 'react-query';
+import { useQuery, useSearchParams } from 'react-query/core';
 
 
 
